@@ -1,0 +1,292 @@
+/* General Styles
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff3e0, #ffcc80);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.box-container {
+    border: none; /* Removed black border */
+    border-radius: 12px;
+    padding: 50px;
+    background: white; /* Keeps the white background */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+
+/* Main Container */
+.container {
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Plans Section */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+/* Individual Plan Box */
+.plan {
+    background: #ffcc80;
+    padding: 25px;
+    border-radius: 12px;
+    width: 240px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+
+.plan:hover {
+    transform: scale(1.07);
+    border: 2px solid black;
+}
+
+.plan.selected {
+    background: #ff9800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan.selected .price {
+    color: white; /* Change price text color to white for better contrast */
+    font-weight: bold;
+}
+
+/* Price Styling */
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+/* Feature List */
+.plan ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.plan ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #6d4c41;
+}
+
+/* Payment Button */
+.pay-btn {
+    background: #ff9800;
+    width: 100%;
+    max-width: 270px;
+    margin-top: 25px;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.5;
+    pointer-events: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pay-btn.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.pay-btn:hover {
+    background: #f57c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+
+
+
+/* ---------- Global ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ---------- Page Wrapper ---------- */
+.page-wrapper {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 1000px;
+  width: 90%;
+}
+
+/* ---------- Header ---------- */
+.header h1 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.header h1 span {
+  color: #ff7e00;
+}
+
+.header p {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* ---------- Plan Cards ---------- */
+.plans {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  width: 270px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff9800;
+}
+
+.plan-card.selected {
+  background: linear-gradient(145deg, #ff9800, #ffb74d);
+  color: white;
+  box-shadow: 0 8px 30px rgba(255, 152, 0, 0.5);
+}
+
+.plan-card.selected ul li {
+  color: white;
+}
+
+.plan-card.selected .price {
+  color: white;
+}
+
+/* ---------- Badge ---------- */
+.badge {
+  background: #ff9800;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  box-shadow: 0 2px 10px rgba(255, 152, 0, 0.4);
+}
+
+/* ---------- Price ---------- */
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff9800;
+  margin: 10px 0 15px;
+}
+
+.price span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ---------- Features ---------- */
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.plan-card ul li {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* ---------- Payment Button ---------- */
+.pay-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 14px 35px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+  pointer-events: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pay-btn.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pay-btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 80%;
+  }
+
+  .page-wrapper {
+    padding: 30px;
+  }
+}
